@@ -120,7 +120,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
             btnBarcodeCaptureCancel.setText(buttonText);
             btnBarcodeCaptureCancel.setOnClickListener(this);
             imgViewBarcodeCaptureUseFlash.setOnClickListener(this);
-            imgViewBarcodeCaptureUseFlash.setVisibility(FlutterBarcodeScannerPlugin.isShowFlashIcon ? View.VISIBLE : View.GONE);
+            // imgViewBarcodeCaptureUseFlash.setVisibility(FlutterBarcodeScannerPlugin.isShowFlashIcon ? View.VISIBLE : View.GONE);
             mPreview = findViewById(R.id.preview);
             mGraphicOverlay = findViewById(R.id.graphicOverlay);
 
@@ -404,7 +404,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
             Barcode barcode = new Barcode();
             barcode.rawValue = "-1";
             barcode.displayValue = "-1";
-            FlutterBarcodeScannerPlugin.onBarcodeScanReceiver(barcode);
+            // FlutterBarcodeScannerPlugin.onBarcodeScanReceiver(barcode);
             finish();
         }
     }
@@ -493,14 +493,14 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     @Override
     public void onBarcodeDetected(Barcode barcode) {
         if (null != barcode) {
-            if (FlutterBarcodeScannerPlugin.isContinuousScan) {
-                FlutterBarcodeScannerPlugin.onBarcodeScanReceiver(barcode);
-            } else {
-                Intent data = new Intent();
-                data.putExtra(BarcodeObject, barcode);
-                setResult(CommonStatusCodes.SUCCESS, data);
-                finish();
-            }
+            // if (FlutterBarcodeScannerPlugin.isContinuousScan) {
+            //     FlutterBarcodeScannerPlugin.onBarcodeScanReceiver(barcode);
+            // } else {
+            //     Intent data = new Intent();
+            //     data.putExtra(BarcodeObject, barcode);
+            //     setResult(CommonStatusCodes.SUCCESS, data);
+            //     finish();
+            // }
         }
     }
 }
