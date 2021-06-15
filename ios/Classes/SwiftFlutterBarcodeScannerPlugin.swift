@@ -354,7 +354,7 @@ class BarcodeScannerViewController: UIViewController {
         flashIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         flashIcon.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
         flashIcon.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        flashIcon.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
+        flashIcon.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
         
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         cancelButton.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
